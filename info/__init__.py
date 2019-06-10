@@ -1,10 +1,11 @@
 from logging.handlers import RotatingFileHandler
-from flask import Flask, logging
+from flask import Flask
 from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import CSRFProtect
 from redis import StrictRedis
 from config import Config, config
+import logging
 
 db = SQLAlchemy()
 redis_store = None

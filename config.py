@@ -1,4 +1,4 @@
-from flask import logging
+import logging
 from redis import StrictRedis
 
 
@@ -15,6 +15,8 @@ class Config():
     SESSION_REDIS = StrictRedis(host = REDIS_HOST,port=REDIS_PORT)
     PERMANENT_SESSION_LIFETIME = 86400
 
+    LOG_LEVEL = logging.DEBUG
+
 
 
 class DevelopmentConfig(Config):
@@ -22,6 +24,7 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     DEBUG = False
+    LOG_LEVEL = logging.WARNING
 
 
 
