@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_wtf import CSRFProtect
 from redis import StrictRedis
 
 app = Flask(__name__)
@@ -17,9 +18,10 @@ class Config():
 
 
 app.config.from_object(Config)
+
 db = SQLAlchemy(app)
 redis_store = StrictRedis(host=Config.REDIS_HOST,port=Config.REDIS_PORT)
-
+CSRFProtect(app)
 
 @app.route("/")
 def index():
