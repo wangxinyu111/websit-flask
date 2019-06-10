@@ -1,3 +1,4 @@
+from flask_session import Session
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import CSRFProtect
@@ -15,6 +16,10 @@ class Config():
     REDIS_HOST = "127.0.0.1"
     REDIS_PORT = 6379
 
+    SESSION_TYPE = "redis"
+    SESSION_USE_SIGNER = True
+    SESSION_REDIS = StrictRedis(host = REDIS_HOST,port=REDIS_PORT)
+    PERMANENT_SESSION_LIFETIME = 86400
 
 
 app.config.from_object(Config)
@@ -22,6 +27,8 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 redis_store = StrictRedis(host=Config.REDIS_HOST,port=Config.REDIS_PORT)
 CSRFProtect(app)
+Session(app)
+
 
 @app.route("/")
 def index():
