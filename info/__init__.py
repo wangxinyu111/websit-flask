@@ -3,17 +3,24 @@ from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import CSRFProtect
 from redis import StrictRedis
-from config import Config
+from config import Config, config
 
+db = SQLAlchemy()
+redis_store = None
 
-app = Flask(__name__)
+def create_app(config_name):
+    """通过传入不同的配置名字，初始化其对应配置的应用实例"""
+    app = Flask(__name__)
 
-app.config.from_object(Config)
+    app.config.from_object(config[config_name])
 
-db = SQLAlchemy(app)
+    db.init_app(app)
 
-redis_store = StrictRedis(host=Config.REDIS_HOST,port=Config.REDIS_PORT)
+    global redis_store
+    redis_store = StrictRedis(host=config[config_name].REDIS_HOST, port=config[config_name].REDIS_PORT)
 
-CSRFProtect(app)
+    CSRFProtect(app)
 
-Session(app)
+    Session(app)
+
+    return app

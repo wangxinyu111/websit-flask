@@ -22,3 +22,11 @@ class ProductionConfig(Config):
 
 class TestingConfig(Config):
     DEBUG = True
+
+
+# 定义配置字典
+config = {
+    "development": DevelopmentConfig,
+    "production": ProductionConfig,
+    "testing": TestingConfig
+}
