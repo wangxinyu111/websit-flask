@@ -1,3 +1,4 @@
+from flask import logging
 from redis import StrictRedis
 
 
@@ -14,11 +15,15 @@ class Config():
     SESSION_REDIS = StrictRedis(host = REDIS_HOST,port=REDIS_PORT)
     PERMANENT_SESSION_LIFETIME = 86400
 
+
+
 class DevelopmentConfig(Config):
     DEBUG = True
 
 class ProductionConfig(Config):
     DEBUG = False
+
+
 
 class TestingConfig(Config):
     DEBUG = True
