@@ -8,7 +8,7 @@ from config import Config, config
 import logging
 
 db = SQLAlchemy()
-redis_store = None
+redis_store = None # type:StrictRedis
 
 def set_log(config_name):
     # 设置日志的记录等级
@@ -35,7 +35,7 @@ def create_app(config_name):
     global redis_store
     redis_store = StrictRedis(host=config[config_name].REDIS_HOST, port=config[config_name].REDIS_PORT)
 
-    CSRFProtect(app)
+    # CSRFProtect(app)
 
     Session(app)
 
