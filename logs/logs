@@ -66,3 +66,21 @@ INFO _internal.py:122 127.0.0.1 - - [10/Jun/2019 16:30:38] "GET /?__debugger__=y
 INFO _internal.py:122 127.0.0.1 - - [10/Jun/2019 16:30:38] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [10/Jun/2019 16:30:38] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
 INFO _internal.py:122 127.0.0.1 - - [10/Jun/2019 16:30:40] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 299-797-631
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:53:38] "GET / HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:53:39] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:53:39] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:53:39] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 12:53:41] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 299-797-631
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 13:01:11] "GET / HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 13:01:11] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 13:01:11] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 13:01:11] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [11/Jun/2019 13:01:13] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
